@@ -7,13 +7,14 @@ struct Date {
     int year;
     string month;
     int day;
+    // Each of the variables defined within a structure is known as a member. //
 };
 
 struct Point {
     int x, y;
 };
-
-void printDate(Date& d) {
+/* Here the variable d represents the "Date" structure. Using a period followed by the name of a member, we can access individual values contained with the structure. */
+void printDate(Date& d) { 
         cout << "Date: " << d.month << " " << d.day << ", " << d.year << endl;
 
 }
@@ -24,12 +25,13 @@ void printPoint(Point& p) {
 
 int main() {
     Date dob {2004, "January", 9};
-    Date weddingDay = {2000, "May", 31};
+    Date weddingDay {2000, "May", 31};
+    // In the case of the above variables, the "Date" structure is the datatype. This allows us to set a value for each member of the structure as the variable is being defined. //
 
     Point p, q, h;
     // Point p = (10, 30);
 
-    char trash;
+    char trash; // The 'trash' variable is used to read the paranthases and comma since we don't need them. //
     cout << "Enter point p: ";
     cin >> trash >> p.x >> trash >> p.y >> trash;
 
